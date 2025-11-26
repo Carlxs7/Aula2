@@ -1,0 +1,92 @@
+:root {
+	--bg: #f6f7fb;
+	--card: #ffffff;
+	--text: #0f1723;
+	--muted: #556073;
+	--accent: #235fa7;
+	--border: #e6e9ef;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	padding: 2rem;
+	font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.45;
+}
+
+.container {
+	max-width: 760px;
+	margin: 0 auto;
+	background: var(--card);
+	padding: 1.75rem 2rem;
+	border-radius: 10px;
+	box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+	border: 1px solid var(--border);
+}
+
+h1 {
+	margin: 0 0 0.6rem 0;
+	font-size: 1.35rem;
+	line-height: 1.25;
+	color: var(--accent);
+	font-weight: 700;
+}
+
+h1 br { display: block; }
+
+h2 {
+	margin: 1.25rem 0 0.35rem 0;
+	font-size: 0.85rem;
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	font-weight: 700;
+}
+
+p {
+	margin: 0 0 0.85rem 0;
+	color: var(--text);
+}
+
+/* Texto solto (linhas sem tag <p>) */
+.container > h2 + * {
+	margin-bottom: 0.6rem;
+	color: var(--text);
+}
+
+/* Pequenos detalhes */
+.muted {
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+/* Espaçamento entre seções */
+.container h2 + * + h2 {
+	margin-top: 1rem;
+}
+
+/* Melhor leitura em telas pequenas */
+@media (max-width: 520px) {
+	body { padding: 1rem; }
+	.container { padding: 1rem; border-radius: 8px; }
+	h1 { font-size: 1.15rem; }
+	h2 { font-size: 0.8rem; }
+}
+
+/* Impressão simples */
+@media print {
+	body { background: #fff; padding: 0; }
+	.container { box-shadow: none; border: none; }
+}
+
+
+.container p, .container {
+	word-break: break-word;
+}
+
